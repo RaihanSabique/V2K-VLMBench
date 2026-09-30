@@ -1,0 +1,47 @@
+# --- Environment and caches ---------------------------------------------------
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+
+# --- Large files: model weights and third-party code (see README "Installation")
+models/
+third_party/
+*.safetensors
+*.onnx
+*.onnx.data
+*.data
+*.task
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# --- Participant data and everything derived from it -------------------------
+# Raw videos, per-video outputs (overlays, frames, marker CSVs, model caches) and
+# documents (lab protocol; the findings report embeds participant frames).
+data/
+outputs/
+documents/
+*.c3d
+
+# Stray media / arrays anywhere else
+*.mp4
+*.mov
+*.MOV
+*.avi
+*.mkv
+*.gif
+*.npz
+*.npy
+
+# ...except the README demo media
+!docs/media/
+!docs/media/*.mp4
+!docs/media/*.gif
+
+# --- Job logs -----------------------------------------------------------------
+slurm/*.out
+*.log
